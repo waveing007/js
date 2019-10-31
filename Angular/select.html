@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="select.js"></script>
+
+</head>
+<style>table, th , td  {
+        border: 1px solid grey;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+      table tr:nth-child(odd) {
+        background-color: #f1f1f1;
+      }
+      table tr:nth-child(even) {
+        background-color: #ffffff;
+      }</style>
+<body>
+    
+    <div ng-app="myApp" ng-controller="customersCtrl">
+ 
+        <table>
+          <tr ng-repeat="x in names">
+            <td>{{ x.id }}</td>
+            <td>{{ x.first_name }}</td>
+            <td>{{ x.last_name }}</td>
+            <td>{{ x.sub_id }}</td>
+            <td>{{ x.address }}</td>
+          </tr>
+        </table>
+         
+        </div>
+</body>
+</html>
